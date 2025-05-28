@@ -114,7 +114,33 @@ public class Section3 {
         //Java has a class called BigDecimal that overcomes this.
         //I mentioned earlier in the course that a class is a kind of a custom data type and Java comes with a whole library of helpful classes.
 
+        //f you're going to be using a char, you can literally only store a single character in a single char variable.
+        char myChar = 'D';
+        System.out.println("myChar is "+ myChar);
+        //java: unclosed character literal
+        //myChar = 'AA';
+        //A char occupies two bytes of memory, or 16 bits.
+        //The reason it's not just a single byte is that a char is stored as a 2 byte number, similar to the short.
+        //This number gets mapped to a single character by Java.
+        //When you print a char, you will see the mapped character, and not the representative number.
+        System.out.println("DataType "+ Character.TYPE +" range is from "+Character.MIN_VALUE+" to "+Character.MAX_VALUE +" and its size is "+Character.SIZE+" bits");
+        //In some instances, characters aren't represented on the keyboard,
+        //or you may have reasons to use special characters in other languages.
+        //To do this, Java supports a unicode value for characters, which you can use to set a char value.
+        //Unicode is an international encoding standard for use with different languages and scripts
+        //by which each letter, digit, or symbol is assigned a unique numeric value that
+        //applies across different platforms and programs
+        //https://symbl.cc/
+        myChar='\uFFFF';
+        System.out.println("myChar is "+ myChar);
+        myChar='\u0044';
+        System.out.println("myChar is "+ myChar);
+        //you can assign a numeric literal to a char variable
+        myChar=68;
+        System.out.println("myChar is "+ myChar);
 
+        //In Java terms, we've got a boolean primitive type, and it can be set to two values only. Either true or false
+        System.out.println("DataType "+ Boolean.TYPE +" its values are "+Boolean.TRUE+" and "+Boolean.FALSE);
 
 
 
