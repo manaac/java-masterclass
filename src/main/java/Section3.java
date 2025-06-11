@@ -2,8 +2,24 @@ public class Section3 {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-
 //        A class is a building block for object-oriented programming and allows us to build custom data types.
+
+//        What is a statement? It's a complete command to be executed. It can include one or more expressions.
+
+//        text specified in double quotes, is called a string literal
+
+//        A keyword is any one of a number of reserved words that have a predefined meaning in the Java language
+
+//        variables are a way to store information in your computer.  Variables that we define in a program, can be accessed by a name we give them,
+//        and the computer does the hard work of figuring out where they get stored in the computers random access memory, or ram.
+//        A variable, as the name suggests, can be changed, in other words, its contents are variable.
+//        So what we have to do is tell the computer what type of information we want to store in the variable, and then give the variable a name.
+
+//        A declaration statement is used to define a variable by indicating the data type and the name, then optionally to set the variable to a value
+
+//        what is an expression? An expression is a coding construct that evaluates to a single value.
+//        the expression is the code segment that is on the right side of the equals sign in an assignment or declaration statement.
+//        This code can be a simple literal value, like the number 5, or it can be a complex mathematical equation using multiple literal values and mathematical operators.
 
 //      Primitive data types (8 of them) are the most basic data types — they’re not objects, and they hold simple, raw values directly in memory.
 //      Wrapper classes are object representations of the primitive data types
@@ -22,11 +38,11 @@ public class Section3 {
 //      The minimum value, when it underflows, wraps around to the maximum value and continues processing.
 //      Overflow happens when a value exceeds the maximum limit that an integer type can hold.
         int myIntValue = Integer.MAX_VALUE+1;
-        System.out.println("overflow value is "+ myIntValue);
+        System.out.println("overflow integer value is "+ myIntValue);
 
         //Underflow happens when a value goes below the minimum limit of the integer.
         myIntValue = Integer.MIN_VALUE-1;
-        System.out.println("underflow value is "+ myIntValue);
+        System.out.println("underflow integer value is "+ myIntValue);
 
 //      The Java compiler doesn't attempt to evaluate the expression to determine its value, so it does not give you an error.
 //      If you assign a numeric literal value to a data type that is outside of the range, the compiler does give you an error.
