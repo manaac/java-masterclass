@@ -3,7 +3,7 @@
 // can access a particular element. Right now, we're going to be using
 //the public access modifier anytime we create a new class in Java, to give full access.
 public class Section4 {
-//    The class keyword is used to define a class.
+    //    The class keyword is used to define a class.
 //    The class name will be the text following the keyword, so Section4 in this case.
     public static void main(String[] args) {
 //        So, what is a method?
@@ -18,7 +18,7 @@ public class Section4 {
 //        It tells your program to execute a certain section of code only if a particular test evaluates to true. This is known as conditional logic.
         boolean isAlient = true;
 //        The equality operator tests to see if two operands are considered equal and returns a boolean value.
-        if(isAlient == true) {
+        if (isAlient == true) {
             System.out.println("its not alien 1");
             System.out.println("i am scared 1");
         }
@@ -26,7 +26,8 @@ public class Section4 {
         //By putting a semicolon there, we're closing
         //off that line of code, which means the next line is not dependent on
         //it anymore and will execute regardless of whether the expression is true or false.
-        if(isAlient == false); {
+        if (isAlient == false) ;
+        {
             System.out.println("its not alien 2");
             System.out.println("i am scared 2");
         }
@@ -34,24 +35,24 @@ public class Section4 {
         //without the code block,
         //only the line immediately following the if-then statement, is executed.
         //All subsequent lines are not considered to be part of the if-then statement.
-        if(isAlient == true)
+        if (isAlient == true)
             System.out.println("its not alien 3");
-            System.out.println("i am scared 3");
+        System.out.println("i am scared 3");
 
         int topScore = 100;
-        if(topScore == 100) {
+        if (topScore == 100) {
             System.out.println("you got highest score 1");
         }
-        if(topScore > 100) {
+        if (topScore > 100) {
             System.out.println("you got highest score 2");
         }
-        if(topScore >= 100) {
+        if (topScore >= 100) {
             System.out.println("you got highest score 3");
         }
-        if(topScore < 100) {
+        if (topScore < 100) {
             System.out.println("you got highest score 4");
         }
-        if(topScore <= 100) {
+        if (topScore <= 100) {
             System.out.println("you got highest score 5");
         }
 
@@ -76,31 +77,31 @@ public class Section4 {
 //        }
 
         int thirdTopScore = 60;
-        if(thirdTopScore == 60){
+        if (thirdTopScore == 60) {
             System.out.println("this is correct because we are using equal to operator");
         }
 
         //it's assigning the value true to "isCar", and then returning the boolean value, true.
         boolean isCar = false;
-        if(isCar = true){
+        if (isCar = true) {
             System.out.println("this is not supposed to happen");
         }
 
-        if(isCar == true){
+        if (isCar == true) {
             System.out.println("this block will execute as isCar became true as part of if(isCar = true)");
         }
 
-        if(isCar){
+        if (isCar) {
             System.out.println("this block will execute as isCar became true as part of if(isCar = true)");
         }
 
-        if(isCar != false){
+        if (isCar != false) {
             System.out.println("this block will execute");
         }
 
         //The exclamation mark or "not" operator, is also known as the logical complement operator.
         //It can be used with a boolean variable to test for the opposite value.
-        if(!isCar){
+        if (!isCar) {
             System.out.println("this block will not execute");
         }
 
@@ -112,7 +113,7 @@ public class Section4 {
 
         String makeOfCar = "Honda";
         boolean isDomestic = (makeOfCar == "Honda") ? false : true;
-        if(isDomestic){
+        if (isDomestic) {
             System.out.println("this block will not execute as isDomestic is false");
         }
 
@@ -120,7 +121,7 @@ public class Section4 {
         System.out.println(s);
 
         int ageOfClient = 18;
-        String ageText = (ageOfClient > 18 ) ? "major" : "minor";
+        String ageText = (ageOfClient > 18) ? "major" : "minor";
         System.out.println("ageText is " + ageText);
 
         //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html - Summary of Operators
@@ -134,15 +135,9 @@ public class Section4 {
         System.out.println("theRemainder is " + theRemainder);
         boolean variable6 = (theRemainder == 0) ? true : false;
         System.out.println("variable6 is " + variable6);
-        if(!variable6){
+        if (!variable6) {
             System.out.println("got some remainder");
         }
-
-
-
-
-
-
 
 
     }
