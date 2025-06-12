@@ -18,6 +18,7 @@ public class Section4 {
 //        It tells your program to execute a certain section of code only if a particular test evaluates to true. This is known as conditional logic.
         boolean isAlient = true;
 //        The equality operator tests to see if two operands are considered equal and returns a boolean value.
+        //if-then statement
         if (isAlient == true) {
             System.out.println("its not alien 1");
             System.out.println("i am scared 1");
