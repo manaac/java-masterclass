@@ -125,6 +125,38 @@ public class Section5 {
         System.out.println("Your final score 4 is: " + calculateScoreWithReturnType(true, 800, 5, 100));
         System.out.println("Your final score 4 is: " + calculateScoreWithReturnType(true, 10000, 8, 200));
 
+
+        displayHighScorePosition("Tim", calculateHighScorePosition(1500));
+        displayHighScorePosition("Mike", calculateHighScorePosition(1000));
+        displayHighScorePosition("Jon", calculateHighScorePosition(500));
+        displayHighScorePosition("Bob", calculateHighScorePosition(100));
+        displayHighScorePosition("Jason", calculateHighScorePosition(25));
+
+        //Method overloading occurs when a class has multiple methods with the same name, but the
+        //methods are declared with different parameters
+
+        //A method signature consists of the name of the method and the uniqueness
+        //of the declaration of its parameters.
+        //In other words, a signature is unique, not just by the method name,
+        //but in combination with the number of parameters, their types,
+        //and the order in which they are declared.
+        // A method's return type is not part of the signature.
+        // A parameter name is also not part of the signature.
+        // The type, order, and number of parameters, in conjunction with the name, make a method signature unique.
+
+        System.out.println("68 inch = " + convertToCentimeter(68) + " cm");
+        System.out.println("5 feet 8 inches = " + convertToCentimeter(5, 8) + " cm");
+
+        System.out.println(getDurationString(180));
+        System.out.println(getDurationString(185));
+        System.out.println(getDurationString(180, 5));
+
+        System.out.println(getDurationString(3945));
+        System.out.println(getDurationString(65, 45));
+        System.out.println(getDurationString(-3945));
+        System.out.println(getDurationString(65, 145));
+
+
     }
 
     //        public static void methodName(p1dataType p1, p2dataType p2, {more}){
@@ -204,5 +236,102 @@ public class Section5 {
 
     //Some programming languages will call a method that
     //returns a value, a function, and a method that doesn't return a value, a procedure.
+
+    public static void displayHighScorePosition(String playerName, int playerPosition) {
+        System.out.println(playerName + " managed to get into position " + playerPosition + " on the high score list");
+    }
+
+    public static int calculateHighScorePosition(int playerScore) {
+        int result = 4;
+        if (playerScore >= 1000) {
+            result = 1;
+        } else if (playerScore >= 500 && playerScore < 1000) {
+            result = 2;
+        } else if (playerScore >= 100 && playerScore < 500) {
+            result = 3;
+        }
+        return result;
+    }
+
+    //below 5 are overriding methods
+    public static void doSomething(int parameterA) {
+        //method body
+    }
+
+    public static void doSomething(float parameterA) {
+        //method body
+    }
+
+    public static void doSomething(int parameterA, float parameterB) {
+        //method body
+    }
+
+    public static void doSomething(float parameterA, int parameterB) {
+        //method body
+    }
+
+    public static void doSomething(int parameterA, int parameterB, float parameterC) {
+        //method body
+    }
+
+    //not a valid overloading method even though parameter name is different
+//    public static void doSomething(int parameterB) {
+//        //method body
+//    }
+
+    //not a valid overloading method even though return type is different
+//    public static int doSomething(int parameterA) {
+//        //method body
+//        return 0;
+//    }
+
+    public static double convertToCentimeter(int inches) {
+        return inches * 2.54;
+    }
+
+    public static double convertToCentimeter(int feet, int inches) {
+        int totalInches = feet * 12 + inches;
+        return convertToCentimeter(totalInches);
+    }
+
+    public static String getDurationString(int seconds) {
+        if (seconds < 0) {
+            return "input seconds " + seconds + " should be greater than or equal to 0";
+        }
+        return getDurationString(seconds / 60, seconds % 60);
+
+//        if (seconds > 0) {
+//            int minutes = seconds / 60;
+//            int remainingSeconds = seconds % 60;
+//            return getDurationString(minutes, remainingSeconds);
+//        } else {
+//            return "input seconds "+ seconds +" should be greater than or equal to 0";
+//        }
+
+    }
+
+    public static String getDurationString(int minutes, int seconds) {
+        if (minutes < 0) {
+            return "input minutes " + minutes + " should be greater than 0";
+        }
+
+        if (seconds < 0 || seconds > 60) {
+            return "input seconds " + seconds + " should be between 0 and 59";
+        }
+
+        int hours = minutes / 60;
+        int remainingMinutes = minutes % 60;
+        return (hours + "h " + remainingMinutes + "m " + seconds + "s");
+
+//        if (minutes >= 0 && (seconds >= 0 && seconds < 60)) {
+//            int hours = minutes / 60;
+//            int remainingMinutes = minutes % 60;
+//            return (hours + "h " + remainingMinutes + "m " + seconds + "s");
+//        }
+//        else{
+//            return "input minutes "+ minutes+" should be greater than or equal to 0 and input seconds "+ seconds+" should be greater than 0 and less than 60";
+//        }
+    }
+
 
 }
